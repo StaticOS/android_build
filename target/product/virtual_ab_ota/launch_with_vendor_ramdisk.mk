@@ -27,3 +27,8 @@ PRODUCT_PACKAGES += \
     fsck.f2fs.vendor_ramdisk \
     resize2fs.vendor_ramdisk \
     tune2fs.vendor_ramdisk
+
+PRODUCT_PACKAGES += \
+    e2fsck.recovery \
+    resize2fs.recovery \
+    tune2fs.recovery

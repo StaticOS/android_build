@@ -23,16 +23,7 @@ PRODUCT_PACKAGES += \
     resize2fs_ramdisk \
     tune2fs_ramdisk
 
-# For dedicated recovery partitions, we need to include fs tools
-# For GKI devices, BOARD_USES_RECOVERY_AS_BOOT is empty, but
-# so is BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT.
-ifdef BUILDING_RECOVERY_IMAGE
-ifneq ($(BOARD_USES_RECOVERY_AS_BOOT),true)
-ifneq ($(BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT),true)
 PRODUCT_PACKAGES += \
     e2fsck.recovery \
     resize2fs.recovery \
     tune2fs.recovery
-endif
-endif
-endif
